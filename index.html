@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kaasijs</title>
+<meta name="description" content="furry gamedev &amp; artist, building Devils Resort.">
+<link rel="icon" href="assets/paw-heart.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="flag-ribbon" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <img class="brand-paw" src="assets/paw-heart.png" alt="">
+    <span class="brand-name">kaasijs</span>
+  </a>
+  <nav class="site-nav" aria-label="Primary">
+    <a class="nav-link is-active" href="index.html">home</a>
+    <a class="nav-link" href="socials.html">socials</a>
+    <a class="nav-link" href="projects.html">projects</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" id="hero">
+    <div class="hero-bg" style="background-image:url('assets/avatar.jpg')" aria-hidden="true"></div>
+    <div class="hero-scrim" aria-hidden="true"></div>
+
+    <div class="paw-ambient" aria-hidden="true">
+      <img src="assets/paw-heart.png" alt="" style="left:8%; animation-duration:16s; animation-delay:0s;">
+      <img src="assets/paw-heart.png" alt="" style="left:22%; animation-duration:21s; animation-delay:-6s; width:24px;">
+      <img src="assets/paw-heart.png" alt="" style="left:38%; animation-duration:18s; animation-delay:-11s;">
+      <img src="assets/paw-heart.png" alt="" style="left:60%; animation-duration:24s; animation-delay:-3s; width:28px;">
+      <img src="assets/paw-heart.png" alt="" style="left:78%; animation-duration:19s; animation-delay:-15s;">
+      <img src="assets/paw-heart.png" alt="" style="left:90%; animation-duration:22s; animation-delay:-8s; width:22px;">
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-panel">
+        <p class="eyebrow mono">// furry · gamedev · artist</p>
+
+        <button type="button" class="logo-button" id="logoBtn" aria-label="kaasijs — click for a surprise">
+          <img class="hero-logo" src="assets/logo.png" alt="kaasijs">
+        </button>
+
+        <p class="tagline">Building a roguelike multiplayer game, drawing way too much fursona art, and posting about both across every platform I own.</p>
+
+        <p class="terminal-line" aria-hidden="true">
+          <span class="prompt">$</span> <span id="typed"></span><span class="cursor">▌</span>
+        </p>
+
+        <div class="chip-row">
+          <span class="chip pink">she/her</span>
+          <span class="chip blue">gamedev</span>
+          <span class="chip gold">artist</span>
+        </div>
+
+        <span class="sticker-tag">hii!</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="paw-divider" aria-hidden="true"></div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>furry</span><span class="dot">·</span>
+      <span>gamedev</span><span class="dot">·</span>
+      <span>art</span><span class="dot">·</span>
+      <span>devils resort</span><span class="dot">·</span>
+      <span>she/her</span><span class="dot">·</span>
+      <span>furry</span><span class="dot">·</span>
+      <span>gamedev</span><span class="dot">·</span>
+      <span>art</span><span class="dot">·</span>
+      <span>devils resort</span><span class="dot">·</span>
+      <span>she/her</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <section class="hub-grid" aria-label="Where to go next">
+    <a class="hub-tile tile-blue" href="socials.html" data-reveal>
+      <span class="tile-icon"><img src="assets/paw-heart.png" alt=""></span>
+      <h2>socials</h2>
+      <p>every place I post, ranked by how often I actually check it.</p>
+      <span class="tile-cta mono">see the list →</span>
+    </a>
+
+    <a class="hub-tile tile-pink" href="projects.html" data-reveal>
+      <span class="tile-icon"><img src="assets/pencil-render.png" alt=""></span>
+      <h2>projects</h2>
+      <p>the roguelike I'm building, and the art in between commits.</p>
+      <span class="tile-cta mono">take a look →</span>
+    </a>
+  </section>
+
+  <section class="crew">
+    <figure class="polaroid" data-reveal>
+      <span class="tape" aria-hidden="true"></span>
+      <img src="assets/group-foto.png" alt="a group of online friends, drawn as their fursonas together">
+      <figcaption>the usual suspects</figcaption>
+    </figure>
+    <div class="crew-text" data-reveal>
+      <h3>not doing this alone</h3>
+      <p>most of what ends up on this site — the art, the game, the constant scroll of new platforms — gets made alongside a very online circle of friends. say hi to them too, over on the socials page.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <a class="footer-link" href="https://github.com/Kaasijs/kaasijs.github.io" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.4c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.6 3 5.5 3.3 5.5 3.3a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.1 9.7c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+    made by kaasijs
+  </a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
