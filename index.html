@@ -38,19 +38,33 @@
     font-family:'Baloo 2', cursive;
     scroll-behavior:smooth;
     align-items: center;    
-    animation: fadeInUp 1s ease-out;
+  }
 
+  /* Everything starts hidden */
+  .site-fade {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  @keyframes fadeInUp{
-    0%{
+
+  /* JS adds this class */
+  .site-fade.show {
+    animation: fadeInDown 0.7s ease-out forwards;
+  }
+
+  @keyframes fadeInDown {
+    0% {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(-20px);
     }
-    100%{
-      opacity: 1;
-      transform: translateY(0);
-    }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
+
+}
+  /* Bounce after 5 seconds */ .site-fade.bounce { animation: littleBounce 0.55s ease-in-out; }
+  @keyframes littleBounce { 0% { transform: translateY(0); } 30% { transform: translateY(-8px); } 55% { transform: translateY(2px); } 75% { transform: translateY(-4px); } 100% { transform: translateY(0); } }
 
   a{ color:inherit; }
 
@@ -429,5 +443,22 @@
 <footer style=padding:0px;margin:0;>
   <img style=padding:0px;width:100%;margin:0;transform:translateY(10px); src="assets/group-foto.png">
 </footer style=padding:0px;margin:0;>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(
+    "header, main, section, article, footer, nav, h1, h2, h3, p, img, button, a, .card"
+  );
+
+  elements.forEach((element, index) => {
+    element.classList.add("site-fade");
+    element.style.animationDelay = `${index * 0.08}s`;
+
+    setTimeout(() => {
+      element.classList.add("show");
+    }, 50);
+  });
+});
+</script>
 
 </html>
