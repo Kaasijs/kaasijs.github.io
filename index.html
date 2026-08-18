@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=0.8">
 <title>Kaasijs</title>
 <link rel="icon" href="assets/paw-heart.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +19,7 @@
     --paper:#FFF8FB;
     --shadow: 6px 6px 0 rgba(61,18,51,0.14);
     --bg-image: url("assets/avatar.png?v=2");
+    zoom:1.25;
   }
 
   @keyframes float{
@@ -37,16 +38,19 @@
     font-family:'Baloo 2', cursive;
     scroll-behavior:smooth;
     align-items: center;    
+    animation: fadeInUp 1s ease-out;
 
-    /*
-    background:
-      radial-gradient(ellipse 60% 50% at 15% 20%, rgba(91,206,250,0.55), transparent 60%),
-      radial-gradient(ellipse 55% 45% at 85% 15%, rgba(245,169,184,0.6), transparent 60%),
-      radial-gradient(ellipse 70% 60% at 50% 100%, rgba(245,169,184,0.35), transparent 65%),
-      var(--bg-image) center / cover no-repeat;
-    background-size: cover;
-    */
-  } 
+  }
+  @keyframes fadeInUp{
+    0%{
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   a{ color:inherit; }
 
@@ -59,16 +63,20 @@
     align-content: center;
     align-items: center;
     justify-content:center;
-    padding: 64px 24px 48px;
+    padding: 32px 10px 20px;
     overflow:hidden;
+    --hero-overlay:#ffb3c299;
+    background:
+      linear-gradient(180deg, var(--hero-overlay) 0%,var(--hero-overlay) 20%, var(--paper) 100%),
+      var(--bg-image) center / cover no-repeat;
+    background-size: cover;
   }
 
   .hero-logo{
+    padding: 0px 0px 0px;
+    align-self: center;
+    min-height: 0px;
     transition: transform 0.22s cubic-bezier(.2,1.2,.4,1), box-shadow 0.22s;
-  }
-  .hero-logo:hover {
-    transform: translateY(-6px) rotate(0deg) scale(1.03);
-    outline:none;
   }
 
   .chip{
@@ -294,9 +302,9 @@
 <body>
 
 <header class="hero">
-  <img class="hero-logo" style=max-width:460px; src="assets/logo.png" alt="kaasijs">
-  <div style=min-height:12px;></div>
-  <div style=min-height:12px;></div>
+  <img class="hero-logo" style=max-width:500px;width:100%; src="assets/logo.png" alt="kaasijs">
+  <div style=min-height:16px;></div>
+  <div style=min-height:16px;></div>
   <div class="chip-row">
     <span class="chip pink">She/Her</span>
     <span class="chip blue">Developer</span>
